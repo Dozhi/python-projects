@@ -4,8 +4,13 @@ from psutil import net_io_counters
 print('hello world')
 #s = psutil.cpu_count()
 
+
+def rcv_data():
+    return net_io_counters()
+
 def main():
-    print('hello world')
+    net_data = rcv_data()
+    print(net_data)
 
 
 
